@@ -4,4 +4,12 @@ import { Component } from "@angular/core";
     selector:'app-user',
     templateUrl:'./user.component.html'
 })
-export class UserComponent{}
+export class UserComponent{
+    
+    userId:number=1001;
+    userStatus:string= "Offline";
+
+    getUserStatus(){
+        return this.userStatus;
+    }
+}
