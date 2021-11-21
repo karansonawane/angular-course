@@ -20,7 +20,7 @@ export class UsersComponent implements OnInit {
 
   allowNewUser = false;
   userCreatedStatus = 'No User is created';
-  userName='Test user';
+  userName='';
   isUserCreated=false;
 
   constructor() { 
