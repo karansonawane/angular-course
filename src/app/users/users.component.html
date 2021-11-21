@@ -2,7 +2,8 @@
 <h3>Users Components</h3>
 <div class="my-2">
     <label for="">User Name: </label>
-    <input class="form-control" type="text" (input)="onUpdateUser($event)"/>
+    <!-- <input class="form-control" type="text" (input)="onUpdateUser($event)"/> -->
+    <input class="form-control" type="text" [(ngModel)]="userName" />
     <div> {{userName}} </div>
 </div>
 <button class="btn btn-primary" [disabled]="!allowNewUser" (click)="changeUserCreatedStatus()">Add User</button>
