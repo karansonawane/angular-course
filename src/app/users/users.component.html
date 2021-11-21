@@ -8,5 +8,10 @@
 </div>
 <button class="btn btn-primary" [disabled]="!allowNewUser" (click)="changeUserCreatedStatus()">Add User</button>
 
-<div *ngIf="isUserCreated"> User is created and the username is {{userName}} </div>
+<div *ngIf="isUserCreated; else noUser"> User is created and the username is {{userName}} </div>
+
+<ng-template #noUser>
+    <div>No user is created, Please create user</div>
+</ng-template>
+
 <app-user></app-user>
