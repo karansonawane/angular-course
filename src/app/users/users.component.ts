@@ -19,9 +19,10 @@ import { Component, OnInit } from '@angular/core';
 export class UsersComponent implements OnInit {
 
   allowNewUser = false;
-  userCreatedStatus = 'No User is created';
-  userName='';
+  // userCreatedStatus = 'No User is created';
+  userName='Test user';
   isUserCreated=false;
+  users = ['user1', 'user2'];
 
   constructor() { 
     setTimeout(() => {
@@ -31,7 +32,8 @@ export class UsersComponent implements OnInit {
 
    changeUserCreatedStatus(){
      this.isUserCreated=true
-     this.userCreatedStatus = 'User is created';
+    //  this.userCreatedStatus = 'User is created';
+    this.users.push(this.userName);
    }
 
    onUpdateUser(event: Event){
